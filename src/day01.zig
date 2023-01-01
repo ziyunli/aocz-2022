@@ -1,18 +1,14 @@
 const std = @import("std");
 const List = std.ArrayList;
-var gpa_impl = std.heap.GeneralPurposeAllocator(.{}){};
-const gpa = gpa_impl.allocator();
-
 const split = std.mem.split;
-
 const parseInt = std.fmt.parseInt;
-
 const print = std.debug.print;
-
 const sort = std.sort.sort;
 const asc = std.sort.asc;
 const desc = std.sort.desc;
 
+const util = @import("util.zig");
+const gpa = util.gpa;
 
 const data = @embedFile("data/day01.txt");
 
